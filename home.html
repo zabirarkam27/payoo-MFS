@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo Home Page</title>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Taiwind Css CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/78c61a34b3.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    
+    <main class="flex justify-center m-7">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-5">
+
+                    <!-- Available Balance -->
+                    <div class="flex space-x-16 justify-center items-center">
+                        <div class="stats shadow">
+                            <div class="stat bg-gray-200">
+                                <div id="current-value" class="stat-value">5000</div>
+                                <div class="stat-desc">Available Balance</div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn text-center"><i class="fa-solid fa-right-from-bracket"></i>Log
+                                Out</button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- Payoo features buttons -->
+                    <section>
+                        <div class=" pl-2">
+                            <h1 class="text-2xl font-bold mb-2">Welcome to Payoo!</h1>
+                            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                        </div>
+                        <!-- User Action Buttons -->
+                        <div class="grid-cols-3 my-4 justify-center place-content-around px-2 mx-auto">
+                            <button class="btn w-32 h-20  my-3 ">Add <br>Money</button>
+                            <button class="btn w-32 h-20  my-1">Cash <br> Out</button>
+                            <button class="btn w-32 h-20 my-1">Transfer <br> Money</button>
+                            <button class="btn w-32 h-20 my-1">Get Bonus</button>
+                            <button class="btn w-32 h-20 my-1">Pay Bill</button>
+                            <button class="btn w-32 h-20 my-1">Transaction</button>
+                        </div>
+                        <div class="divider"></div>
+
+                        <!-- add money form -->
+                        <h2 class="text-2xl font-bold pl-4 pb-4">Add Money</h2>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount to Add</span>
+                                    </label>
+                                    <input id="money-added-input" type="text" placeholder="Add Amount to Add Money" class="input input-bordered text-sm" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin Number</span>
+                                    </label>
+                                    <input id="pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered text-sm" autocomplete="off"
+                                        required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button class="btn btn-primary rounded-full" id="add-money">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/home.js"></script>
+
 </body>
+
 </html>
