@@ -9,7 +9,16 @@ document.getElementById('btn-login').addEventListener('click', function(event){
     // console.log(phoneNumber, pinNumber);
 
     if(phoneNumber === '5' && pinNumber === '1234'){
-        window.location.href = '../home.html'
+        document.getElementById('phone-number').value = '';
+        document.getElementById('pin-number').value = '';
+
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            // For local environment, navigate to home.html directly
+            window.location.href = '../home.html';
+        } else {
+            // For GitHub Pages, use relative path from the root
+            window.location.href = '/home.html';
+        }
     }
     else{
         alert('Check your phone Number or pin ')

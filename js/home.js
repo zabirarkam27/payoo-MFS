@@ -2,7 +2,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     event.preventDefault();
 
     const pinNumber = document.getElementById('pin-number').value;
-    
+
     if (pinNumber === '1234') {
         const balance = parseFloat(document.getElementById('current-value').innerText);
         const addedMoney = parseFloat(document.getElementById('money-added-input').value);
@@ -10,6 +10,10 @@ document.getElementById('add-money').addEventListener('click', function (event) 
         const newBalance = balance + addedMoney;
 
         document.getElementById('current-value').innerText = newBalance;
+
+        
+        document.getElementById('money-added-input').value = '';
+        document.getElementById('pin-number').value = '';
 
     } else {
         alert('Failed to Add Money.');
